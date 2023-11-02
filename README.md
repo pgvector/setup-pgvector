@@ -13,7 +13,7 @@ First, choose your installation method:
 
 ### Step
 
-Add pgvector to the preinstalled Postgres installation on [runner images](https://github.com/actions/runner-images). Add a step to your workflow:
+To add to the preinstalled Postgres installation on [runner images](https://github.com/actions/runner-images#available-images), add a step to your workflow.
 
 Linux
 
@@ -35,7 +35,7 @@ See a [full example](https://github.com/pgvector/setup-pgvector/blob/master/.git
 
 ### Service
 
-Use the `ankane/pgvector` image instead of `postgres` for the [service container](https://docs.github.com/en/actions/using-containerized-services/creating-postgresql-service-containers).
+For a [service container](https://docs.github.com/en/actions/using-containerized-services/creating-postgresql-service-containers), use the `ankane/pgvector` image instead of `postgres`.
 
 ```yml
     services:
