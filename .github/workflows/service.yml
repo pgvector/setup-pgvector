@@ -1,0 +1,22 @@
+name: service
+on:
+  push:
+    paths:
+      - .github/workflows/service.yml
+jobs:
+  service:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: ankane/pgvector
+        env:
+          POSTGRES_HOST_AUTH_METHOD: trust
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+    steps:
+      - run: psql -h localhost -U postgres -c 'CREATE EXTENSION vector'
