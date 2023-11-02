@@ -13,7 +13,7 @@ First, choose your installation method:
 
 ### Step
 
-Add pgvector to the preinstalled Postgres installation on [runner images](https://github.com/actions/runner-images).
+Add pgvector to the preinstalled Postgres installation on [runner images](https://github.com/actions/runner-images). Add a step to your workflow:
 
 Linux
 
