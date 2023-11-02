@@ -6,6 +6,8 @@
 
 ## Getting Started
 
+First, choose your installation method:
+
 - [Step](#step)
 - [Service](#service)
 
