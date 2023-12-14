@@ -50,8 +50,8 @@ For a [service container](https://docs.github.com/en/actions/using-containerized
           --health-retries 5
         ports:
           - 5432:5432
-        steps:
-          - run: psql -h localhost -U postgres -c 'CREATE EXTENSION vector'
+      steps:
+        - run: psql -h localhost -U postgres -c 'CREATE EXTENSION vector'
 ```
 
 See a [full example](https://github.com/pgvector/setup-pgvector/blob/master/.github/workflows/service.yml)
