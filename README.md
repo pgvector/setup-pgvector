@@ -35,7 +35,7 @@ See a [full example](https://github.com/pgvector/setup-pgvector/blob/master/.git
 
 ### Service
 
-For a [service container](https://docs.github.com/en/actions/using-containerized-services/creating-postgresql-service-containers), use the `pgvector/pgvector` image instead of `postgres`.
+For a [service container](https://docs.github.com/en/actions/using-containerized-services/creating-postgresql-service-containers), use the `pgvector/pgvector:pg16` image instead of `postgres`.
 
 ```yml
     services:
