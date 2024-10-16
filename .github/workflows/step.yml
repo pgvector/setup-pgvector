@@ -30,7 +30,9 @@ jobs:
       matrix:
         os: [macos-14, macos-13]
     steps:
+      - run: brew install postgresql@17
+      - run: brew link --overwrite postgresql@17
       - name: Install pgvector
-        run: brew install postgresql@17 pgvector
+        run: brew install pgvector
       - run: brew services start postgresql@17 && sleep 1
       - run: psql -d postgres -c 'CREATE EXTENSION vector'
