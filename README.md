@@ -40,7 +40,7 @@ For a [service container](https://docs.github.com/en/actions/using-containerized
 ```yml
     services:
       postgres:
-        image: pgvector/pgvector:pg16
+        image: pgvector/pgvector:pg17
         env:
           POSTGRES_HOST_AUTH_METHOD: trust
         options: >-
