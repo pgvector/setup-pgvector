@@ -15,7 +15,7 @@ First, choose your installation method:
 
 To add to the preinstalled Postgres installation on [runner images](https://github.com/actions/runner-images#available-images), add a step to your workflow.
 
-Ubuntu 24.04
+Ubuntu
 
 ```yml
       - name: Install pgvector
@@ -24,14 +24,7 @@ Ubuntu 24.04
           sudo apt-get install postgresql-16-pgvector
 ```
 
-Ubuntu 22.04 and 20.04
-
-```yml
-      - name: Install pgvector
-        run: |
-          sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y
-          sudo apt-get install postgresql-14-pgvector
-```
+Note: Replace `16` with your Postgres server version
 
 Mac
 
