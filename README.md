@@ -15,7 +15,16 @@ First, choose your installation method:
 
 To add to the preinstalled Postgres installation on [runner images](https://github.com/actions/runner-images#available-images), add a step to your workflow.
 
-Linux
+Ubuntu 24.04
+
+```yml
+      - name: Install pgvector
+        run: |
+          sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y
+          sudo apt-get install postgresql-16-pgvector
+```
+
+Ubuntu 22.04 and 20.04
 
 ```yml
       - name: Install pgvector
@@ -35,7 +44,7 @@ See a [full example](https://github.com/pgvector/setup-pgvector/blob/master/.git
 
 ### Service
 
-For a [service container](https://docs.github.com/en/actions/using-containerized-services/creating-postgresql-service-containers), use the `pgvector/pgvector:pg16` image instead of `postgres`.
+For a [service container](https://docs.github.com/en/actions/using-containerized-services/creating-postgresql-service-containers), use the `pgvector/pgvector:pg17` image instead of `postgres`.
 
 ```yml
     services:

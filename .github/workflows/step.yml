@@ -9,12 +9,18 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-24.04, ubuntu-22.04, ubuntu-20.04]
+        include:
+          - os: ubuntu-24.04
+            postgres: 16
+          - os: ubuntu-22.04
+            postgres: 14
+          - os: ubuntu-20.04
+            postgres: 14
     steps:
       - name: Install pgvector
         run: |
           sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y
-          sudo apt-get install postgresql-14-pgvector
+          sudo apt-get install postgresql-${{ matrix.postgres }}-pgvector
       - run: sudo systemctl start postgresql
       - run: sudo -u postgres psql -c 'CREATE EXTENSION vector'
   mac:
@@ -25,6 +31,6 @@ jobs:
         os: [macos-14, macos-13]
     steps:
       - name: Install pgvector
-        run: brew install pgvector
-      - run: brew services run postgresql@14 && sleep 1
+        run: brew install postgresql@17 pgvector
+      - run: brew services start postgresql@17 && sleep 1
       - run: psql -d postgres -c 'CREATE EXTENSION vector'
