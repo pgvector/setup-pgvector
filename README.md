@@ -2,7 +2,7 @@
 
 [pgvector](https://github.com/pgvector/pgvector) instructions for GitHub Actions
 
-[![Build Status](https://github.com/pgvector/setup-pgvector/actions/workflows/step-ubuntu.yml/badge.svg?branch=master)](https://github.com/pgvector/setup-pgvector/actions) [![Build Status](https://github.com/pgvector/setup-pgvector/actions/workflows/step-mac.yml/badge.svg?branch=master)](https://github.com/pgvector/setup-pgvector/actions) [![Build Status](https://github.com/pgvector/setup-pgvector/actions/workflows/step-windows.yml/badge.svg?branch=master)](https://github.com/pgvector/setup-pgvector/actions) [![Build Status](https://github.com/pgvector/setup-pgvector/actions/workflows/service.yml/badge.svg?branch=master)](https://github.com/pgvector/setup-pgvector/actions)
+[![Build Status](https://github.com/pgvector/setup-pgvector/actions/workflows/step-ubuntu.yml/badge.svg?branch=master)](https://github.com/pgvector/setup-pgvector/actions/workflows/step-ubuntu.yml) [![Build Status](https://github.com/pgvector/setup-pgvector/actions/workflows/step-mac.yml/badge.svg?branch=master)](https://github.com/pgvector/setup-pgvector/actions/workflows/step-mac.yml) [![Build Status](https://github.com/pgvector/setup-pgvector/actions/workflows/step-windows.yml/badge.svg?branch=master)](https://github.com/pgvector/setup-pgvector/actions/workflows/step-windows.yml) [![Build Status](https://github.com/pgvector/setup-pgvector/actions/workflows/service.yml/badge.svg?branch=master)](https://github.com/pgvector/setup-pgvector/actions/workflows/service.yml)
 
 ## Getting Started
 
