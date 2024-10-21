@@ -2,7 +2,7 @@
 
 [pgvector](https://github.com/pgvector/pgvector) instructions for GitHub Actions
 
-[![Build Status](https://github.com/pgvector/setup-pgvector/actions/workflows/step.yml/badge.svg?branch=master)](https://github.com/pgvector/setup-pgvector/actions) [![Build Status](https://github.com/pgvector/setup-pgvector/actions/workflows/service.yml/badge.svg?branch=master)](https://github.com/pgvector/setup-pgvector/actions)
+[![Build Status](https://github.com/pgvector/setup-pgvector/actions/workflows/step-ubuntu.yml/badge.svg?branch=master)](https://github.com/pgvector/setup-pgvector/actions) [![Build Status](https://github.com/pgvector/setup-pgvector/actions/workflows/step-mac.yml/badge.svg?branch=master)](https://github.com/pgvector/setup-pgvector/actions) [![Build Status](https://github.com/pgvector/setup-pgvector/actions/workflows/step-windows.yml/badge.svg?branch=master)](https://github.com/pgvector/setup-pgvector/actions) [![Build Status](https://github.com/pgvector/setup-pgvector/actions/workflows/service.yml/badge.svg?branch=master)](https://github.com/pgvector/setup-pgvector/actions)
 
 ## Getting Started
 
@@ -15,7 +15,7 @@ First, choose your installation method:
 
 To add to the preinstalled Postgres installation on [runner images](https://github.com/actions/runner-images#available-images), add a step to your workflow.
 
-Ubuntu
+#### Ubuntu
 
 ```yml
       - name: Install pgvector
@@ -26,14 +26,18 @@ Ubuntu
 
 Note: Replace `16` with your Postgres server version
 
-Mac
+See a [full example](https://github.com/pgvector/setup-pgvector/blob/master/.github/workflows/step-ubuntu.yml)
+
+#### Mac
 
 ```yml
       - name: Install pgvector
         run: brew install pgvector
 ```
 
-Windows
+See a [full example](https://github.com/pgvector/setup-pgvector/blob/master/.github/workflows/step-mac.yml)
+
+#### Windows
 
 ```yml
       - name: Install pgvector
@@ -49,7 +53,7 @@ Windows
 
 Note: Use `C:\Program Files (x86)\Microsoft Visual Studio\2019` for `windows-2019`
 
-See a [full example](https://github.com/pgvector/setup-pgvector/blob/master/.github/workflows/step.yml)
+See a [full example](https://github.com/pgvector/setup-pgvector/blob/master/.github/workflows/step-windows.yml)
 
 ### Service
 
