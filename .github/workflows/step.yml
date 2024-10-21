@@ -43,9 +43,9 @@ jobs:
       matrix:
         include:
           - os: windows-2022
-            vs: "C:\Program Files\Microsoft Visual Studio\2022\Enterprise"
+            vs: C:\Program Files\Microsoft Visual Studio\2022\Enterprise
           - os: windows-2019
-            vs: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise"
+            vs: C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise
     steps:
       - name: Install pgvector
         run: |
