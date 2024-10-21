@@ -47,6 +47,8 @@ Windows
         shell: cmd
 ```
 
+Note: Use `C:\Program Files (x86)\Microsoft Visual Studio\2019` for `windows-2019`
+
 See a [full example](https://github.com/pgvector/setup-pgvector/blob/master/.github/workflows/step.yml)
 
 ### Service
