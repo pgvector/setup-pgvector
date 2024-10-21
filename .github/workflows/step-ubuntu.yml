@@ -5,21 +5,11 @@ on:
       - .github/workflows/step-ubuntu.yml
 jobs:
   ubuntu:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - os: ubuntu-24.04
-            postgres: 16
-          - os: ubuntu-22.04
-            postgres: 14
-          - os: ubuntu-20.04
-            postgres: 14
+    runs-on: ubuntu-24.04
     steps:
       - name: Install pgvector
         run: |
           sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y
-          sudo apt-get install postgresql-${{ matrix.postgres }}-pgvector
+          sudo apt-get install postgresql-16-pgvector
       - run: sudo systemctl start postgresql
       - run: sudo -u postgres psql -c 'CREATE EXTENSION vector'
