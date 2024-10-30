@@ -44,7 +44,7 @@ See a [full example](https://github.com/pgvector/setup-pgvector/blob/master/.git
         run: |
           call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
           cd %TEMP%
-          git clone --branch v0.7.4 https://github.com/pgvector/pgvector.git
+          git clone --branch v0.8.0 https://github.com/pgvector/pgvector.git
           cd pgvector
           nmake /NOLOGO /F Makefile.win
           nmake /NOLOGO /F Makefile.win install
