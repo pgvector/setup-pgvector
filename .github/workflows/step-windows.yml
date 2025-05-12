@@ -5,7 +5,7 @@ on:
       - .github/workflows/step-windows.yml
 jobs:
   windows:
-    runs-on: windows-2022
+    runs-on: windows-2025
     steps:
       - name: Install pgvector
         run: |
@@ -16,8 +16,8 @@ jobs:
           nmake /NOLOGO /F Makefile.win
           nmake /NOLOGO /F Makefile.win install
         shell: cmd
-      - run: sc config postgresql-x64-14 start=auto
-      - run: net start postgresql-x64-14
+      - run: sc config postgresql-x64-17 start=auto
+      - run: net start postgresql-x64-17
       - run: |
           "%PGBIN%/psql" -d postgres -c "CREATE EXTENSION vector"
         shell: cmd
