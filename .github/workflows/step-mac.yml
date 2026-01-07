@@ -5,11 +5,11 @@ on:
       - .github/workflows/step-mac.yml
 jobs:
   mac:
-    runs-on: macos-15
+    runs-on: macos-26
     steps:
-      - run: brew install postgresql@17
-      - run: brew link --overwrite postgresql@17
+      - run: brew install postgresql@18
+      - run: brew link --overwrite postgresql@18
       - name: Install pgvector
         run: brew install pgvector
-      - run: brew services start postgresql@17 && sleep 1
+      - run: brew services start postgresql@18 && sleep 1
       - run: psql -d postgres -c 'CREATE EXTENSION vector'

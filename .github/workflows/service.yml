@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       postgres:
-        image: pgvector/pgvector:pg17
+        image: pgvector/pgvector:pg18-trixie
         env:
           POSTGRES_HOST_AUTH_METHOD: trust
         options: >-

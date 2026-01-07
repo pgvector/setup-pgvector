@@ -57,12 +57,12 @@ See a [full example](https://github.com/pgvector/setup-pgvector/blob/master/.git
 
 ### Service
 
-For a [service container](https://docs.github.com/en/actions/using-containerized-services/creating-postgresql-service-containers), use the `pgvector/pgvector:pg17` image instead of `postgres`.
+For a [service container](https://docs.github.com/en/actions/using-containerized-services/creating-postgresql-service-containers), use the `pgvector/pgvector:pg18-trixie` image instead of `postgres`.
 
 ```yml
     services:
       postgres:
-        image: pgvector/pgvector:pg17
+        image: pgvector/pgvector:pg18-trixie
         env:
           POSTGRES_HOST_AUTH_METHOD: trust
         options: >-
