@@ -42,7 +42,7 @@ See a [full example](https://github.com/pgvector/setup-pgvector/blob/master/.git
 ```yml
       - name: Install pgvector
         run: |
-          call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
+          call "C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
           cd %TEMP%
           git clone --branch v0.8.2 https://github.com/pgvector/pgvector.git
           cd pgvector
@@ -50,6 +50,8 @@ See a [full example](https://github.com/pgvector/setup-pgvector/blob/master/.git
           nmake /NOLOGO /F Makefile.win install
         shell: cmd
 ```
+
+Note: Use `C:\Program Files\Microsoft Visual Studio\2022` for `windows-2022`
 
 See a [full example](https://github.com/pgvector/setup-pgvector/blob/master/.github/workflows/step-windows.yml)
 
