@@ -21,10 +21,10 @@ To add to the preinstalled Postgres installation on [runner images](https://gith
       - name: Install pgvector
         run: |
           sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y
-          sudo apt-get install postgresql-16-pgvector
+          sudo apt-get install postgresql-18-pgvector
 ```
 
-Note: Replace `16` with `14` for `ubuntu-22.04`
+Note: Use `postgresql-16-pgvector` for `ubuntu-24.04` and `postgresql-14-pgvector` for `ubuntu-22.04`
 
 See a [full example](https://github.com/pgvector/setup-pgvector/blob/master/.github/workflows/step-ubuntu.yml)
 

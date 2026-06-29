@@ -5,11 +5,11 @@ on:
       - .github/workflows/step-ubuntu.yml
 jobs:
   ubuntu:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
       - name: Install pgvector
         run: |
           sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y
-          sudo apt-get install postgresql-16-pgvector
+          sudo apt-get install postgresql-18-pgvector
       - run: sudo systemctl start postgresql
       - run: sudo -u postgres psql -c 'CREATE EXTENSION vector'
